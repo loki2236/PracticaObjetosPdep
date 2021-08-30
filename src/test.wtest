@@ -1,0 +1,21 @@
+import example.*
+
+test "shaggy NO sabe Discreta"{
+	assert.notThat(shaggy.sabeDiscreta())
+}
+
+test "shaggy canta"{
+	shaggy.accion("cantando")
+	assert.equals("cantando", shaggy.estaHaciendo())
+}
+
+test "shaggy esta en pasillo"{
+	shaggy.irA(pasillo)
+	assert.equals(pasillo, shaggy.estaEn())
+}
+
+test "shaggy aprende discreta del fantasma"{
+	shaggy.lePideAyuda(fantasma)
+	assert.that(shaggy.sabeDiscreta())
+}
+
