@@ -71,14 +71,18 @@ object fantasma{
 }
 
 object fred {
-    var conDiscreta = true
+    
     var ubicacion = "pasillo"
+    var concentracion=40
 
     method sabeDiscreta(){
-        return conDiscreta
+    	if(concentracion>70)
+        	return true
+        else
+        	return false
     }
     method aprendeDiscreta(){
-        conDiscreta = true
+        concentracion=concentracion*2
     }
     method estaEn(){
         return ubicacion
@@ -86,6 +90,11 @@ object fred {
     method irA(lugar){
         ubicacion = lugar
     }
+    
+    method juegaAlCounter(){
+    	concentracion=40
+    }
+    
 }
 
 object pasillo{

@@ -14,6 +14,17 @@ test "shaggy esta en pasillo"{
 	assert.equals(pasillo, shaggy.estaEn())
 }
 
+test "shaggy aprende discreta con fred"{
+	fred.aprendeDiscreta()
+	shaggy.lePideAyuda(fred)
+	assert.that(shaggy.sabeDiscreta())
+}
+
+test "fred se desconcentra y no sabe discreta"{
+	fred.juegaAlCounter()
+	assert.notThat(fred.sabeDiscreta())
+}
+
 test "shaggy aprende discreta del fantasma"{
 	shaggy.lePideAyuda(fantasma)
 	assert.that(shaggy.sabeDiscreta())
