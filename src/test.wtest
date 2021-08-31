@@ -20,7 +20,7 @@ test "shaggy aprende discreta con fred"{
 	assert.that(shaggy.sabeDiscreta())
 }
 
-test "fred se desconcentra y no sabe discreta"{
+test "fred se desconcentra y no sabe discreta "{
 	fred.juegaAlCounter()
 	assert.notThat(fred.sabeDiscreta())
 }

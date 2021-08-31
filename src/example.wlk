@@ -83,7 +83,7 @@ object fred {
     }
     method aprendeDiscreta(){
         concentracion=concentracion*2
-    }
+    } 
     method estaEn(){
         return ubicacion
     }
